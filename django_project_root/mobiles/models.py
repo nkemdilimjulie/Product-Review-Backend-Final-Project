@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 
 
 class Mobiles(models.Model):
-    ean = models.CharField(
+    ean = models.CharField( # primary key of 13 digits from barcode
         max_length=13,
         primary_key=True,
         validators=[
