@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vydzt$q#$ljsom&agzkf)4@lkp(h&#f&=%uo$c*krurb#peq!r'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -52,6 +56,8 @@ INSTALLED_APPS = [
     "mobiles",
     # reviews related
     "reviews",
+    # marketers related
+    "marketers",
 ]
 
 MIDDLEWARE = [
@@ -157,11 +163,18 @@ REST_FRAMEWORK = {
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # django-allauth settings
-ACCOUNT_AUTHENTICATION_METHOD = "username"
-ACCOUNT_LOGIN_METHODS = {"username"}
-ACCOUNT_EMAIL_REQUIRED = False
-ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "optional"
+# ACCOUNT_AUTHENTICATION_METHOD = "username"
+# ACCOUNT_LOGIN_METHODS = {"username"}
+# ACCOUNT_EMAIL_REQUIRED = False
+# ACCOUNT_USERNAME_REQUIRED = True
+# ACCOUNT_EMAIL_VERIFICATION = "optional"
 
 # Required for django-allauth
 SITE_ID = 1
+
+
+# Custom serializer for default RegisterView (user self-registration API endpoint (ie. signup))
+REST_AUTH = {
+    'REGISTER_SERIALIZER': 
+        'accounts.serializers.CustomRegisterSerializer',
+}
