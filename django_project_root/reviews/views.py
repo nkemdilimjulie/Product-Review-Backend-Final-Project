@@ -10,9 +10,9 @@ class ReviewListView(generics.ListCreateAPIView):
     serializer_class = ReviewSerializer
     
     
-    # to create reviews (by currently logged-in user only)
+    # to create reviews (by currently logged-in user only, excluding marketer users)
     def perform_create(self, serializer):
-        if self.request.user.is_authenticated:
+        if self.request.user.is_authenticated and self.request.user.is_marketer == False:
             serializer.save(author=self.request.user)
         else:
             raise PermissionDenied
