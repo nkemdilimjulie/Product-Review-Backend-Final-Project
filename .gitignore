@@ -4,4 +4,4 @@ __pycache__/
 myvenv/
 .env
 db.sqlite3
-
+./django_project_root/db.sqlite3
