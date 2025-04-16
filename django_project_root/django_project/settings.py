@@ -33,33 +33,37 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
+    # Django default apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # Auth-related
     "dj_rest_auth",
-    "rest_framework.authtoken",  # Token-based authentication
+    "dj_rest_auth.registration",
+    "rest_framework.authtoken",
     "allauth",
     "allauth.account",
-    "allauth.socialaccount",  # If you're using social login
-    "dj_rest_auth.registration",
-    # Third-party apps
+    "allauth.socialaccount",
+
+    # Third-party
     "rest_framework",
-    # Local apps
-    # accounts related
+    "corsheaders",
+
+    # Your apps
     "accounts",
-    # mobile phones related
     "mobiles",
-    # reviews related
     "reviews",
-    # marketers related
     "marketers",
-    'corsheaders',
+
+    # generator for Swagger
+    'drf_yasg', 
 ]
+
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -151,14 +155,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "accounts.CustomUser" # new, registered CustomUser instead of User in database
 
-
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
-        #"rest_framework.permissions.IsAuthenticatedOrReadOnly"
         "rest_framework.permissions.IsAuthenticated",
     ],
 }
@@ -183,3 +185,9 @@ REST_AUTH = {
     'REGISTER_SERIALIZER': 
         'accounts.serializers.CustomRegisterSerializer',
 }
+
+# Custom settings for Swagger (keeps read only mode: 'Try it out' option removed)
+SWAGGER_SETTINGS = {
+    'SUPPORTED_SUBMIT_METHODS': [],
+}
+
