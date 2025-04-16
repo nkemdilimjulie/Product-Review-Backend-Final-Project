@@ -59,6 +59,9 @@ INSTALLED_APPS = [
     "mobiles",
     "reviews",
     "marketers",
+
+    # generator for Swagger
+    'drf_yasg', 
 ]
 
 
@@ -183,4 +186,8 @@ REST_AUTH = {
         'accounts.serializers.CustomRegisterSerializer',
 }
 
+# Custom settings for Swagger (keeps read only mode: 'Try it out' option removed)
+SWAGGER_SETTINGS = {
+    'SUPPORTED_SUBMIT_METHODS': [],
+}
 
