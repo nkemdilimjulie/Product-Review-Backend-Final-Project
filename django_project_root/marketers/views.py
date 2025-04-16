@@ -22,3 +22,17 @@ class MarketerDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthorOrReadOnly,)
     queryset = Marketer.objects.all()
     serializer_class = MarketerSerializer
+
+
+
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import ModelViewSet
+from .models import Marketer
+from .serializers import MarketerSerializer
+
+class MarketerViewSet(ModelViewSet):
+    serializer_class = MarketerSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Marketer.objects.filter(author=self.request.user)

@@ -23,4 +23,17 @@ class ReviewDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Reviews.objects.all()
     serializer_class = ReviewSerializer
 
-    
+
+# # reviews/views.py
+
+# from rest_framework.permissions import IsAuthenticated
+# from rest_framework.viewsets import ModelViewSet
+# from .models import Reviews
+# from .serializers import ReviewSerializer
+
+# class ReviewViewSet(ModelViewSet):
+#     serializer_class = ReviewSerializer
+#     permission_classes = [IsAuthenticated]
+
+#     def get_queryset(self):
+#         return Reviews.objects.filter(author=self.request.user)
