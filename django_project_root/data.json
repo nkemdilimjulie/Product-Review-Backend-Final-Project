@@ -2740,19 +2740,6 @@
         "is_marketer": false,
         "groups": [],
         "user_permissions": []
-    }>>>>>>> feature
-}
-},
-{
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2025-04-07T02:33:30.332Z",
-        "is_marketer": false,
-        "groups": [],
-        "user_permissions": []
     }
 },
 {
@@ -3171,22 +3158,6 @@
 },
 {
     "model": "reviews.reviews",
-    "pk": 15,
-    "fields": {
-        "phone": "0101010101012",
-        "body": "hey",
-        "author": [
-            "Ifeanyi"
-        ],
-        "created_at": "2025-04-13T20:02:26.330Z",
-        "updated_at": "2025-04-13T20:02:26.330Z",
-        "rate": 3,
-        "seller": "chosen",
-        "price": 40
-    }
-},
-{
-    "model": "reviews.reviews",
     "pk": 16,
     "fields": {
         "phone": "1234567810123",
@@ -3359,70 +3330,6 @@
         "rate": 1,
         "seller": "nkem",
         "price": 50
-    }
-},
-{
-    "model": "reviews.reviews",
-    "pk": 29,
-    "fields": {
-        "phone": "1111411111178",
-        "body": "update me later, testing",
-        "author": [
-            "chosenme"
-        ],
-        "created_at": "2025-04-14T23:40:43.440Z",
-        "updated_at": "2025-04-14T23:40:43.440Z",
-        "rate": 1,
-        "seller": "ju",
-        "price": 20
-    }
-},
-{
-    "model": "reviews.reviews",
-    "pk": 30,
-    "fields": {
-        "phone": "1234335789908",
-        "body": "testing update",
-        "author": [
-            "chosenme"
-        ],
-        "created_at": "2025-04-14T23:45:34.863Z",
-        "updated_at": "2025-04-14T23:45:34.863Z",
-        "rate": 1,
-        "seller": "ju",
-        "price": 25
-    }
-},
-{
-    "model": "reviews.reviews",
-    "pk": 32,
-    "fields": {
-        "phone": "1234567890124",
-        "body": "hu",
-        "author": [
-            "chosenme"
-        ],
-        "created_at": "2025-04-15T01:09:01.910Z",
-        "updated_at": "2025-04-15T01:09:01.910Z",
-        "rate": 1,
-        "seller": "hu",
-        "price": 5
-    }
-},
-{
-    "model": "reviews.reviews",
-    "pk": 33,
-    "fields": {
-        "phone": "1173111111178",
-        "body": "",
-        "author": [
-            "chosenme"
-        ],
-        "created_at": "2025-04-15T01:34:04.503Z",
-        "updated_at": "2025-04-15T01:34:04.503Z",
-        "rate": 1,
-        "seller": "ed",
-        "price": 3
     }
 },
 {
@@ -3709,16 +3616,6 @@
             "bobby"
         ],
         "created": "2025-04-04T01:11:55.980Z"
-    }
-},
-{
-    "model": "authtoken.token",
-    "pk": "6f7a7bd2999f13dbd0963b987c170ff57619d1d0",
-    "fields": {
-        "user": [
-            "chosenme"
-        ],
-        "created": "2025-04-07T02:35:01.149Z"
     }
 },
 {
@@ -4181,186 +4078,6 @@
         "object_repr": "Samsung https://www.shopvergleich.de/produkte/lenovo-thinkpad-e14-g6-intel-core-ultra-5-125u-16gb-ram-512gb-ssd-de-21m7002nge-3179826?ppc_service=css-pla&ppc_campaign=22142355359&ppc_creative=72976800",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2025-04-10T13:57:33.015Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "2341234567789",
-        "object_repr": "Motorola 123",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2025-04-10T13:58:16.971Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1234335789908",
-        "object_repr": "LG 005",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2025-04-10T13:59:10.198Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1234567890124",
-        "object_repr": "Huawei 189",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2025-04-10T13:59:52.997Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1234567810123",
-        "object_repr": "Apple 34P5",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2025-04-10T14:00:41.780Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1434335789907",
-        "object_repr": "Xiaomi 16e",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2025-04-10T14:09:39.827Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1111411111178",
-        "object_repr": "Oppo 234",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-        "action_time": "2025-04-10T14:10:28.677Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1173111111178",
-        "object_repr": "Realme 1897",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-        "action_time": "2025-04-10T14:11:11.954Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "mobiles",
-            "mobiles"
-        ],
-        "object_id": "1111451111178",
-        "object_repr": "OnePlus 205",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2025-04-14T15:21:15.741Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "reviews",
-            "reviews"
-        ],
-        "object_id": "26",
-        "object_repr": "Review by julien on Huawei 189",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2025-04-14T15:21:44.148Z",
-        "user": [
-            "chosenme"
-        ],
-        "content_type": [
-            "reviews",
-            "reviews"
-        ],
-        "object_id": "26",
-        "object_repr": "Review by julien on Huawei 189",
-        "action_flag": 2,
-        "change_message": "[]"
     }
 }
 ]
