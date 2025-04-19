@@ -163,6 +163,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
+
 }
 
 
@@ -191,3 +192,11 @@ SWAGGER_SETTINGS = {
     'SUPPORTED_SUBMIT_METHODS': [],
 }
 
+# This section enables sending a message to the specified email address at the frontend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.yahoo.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'tarasjulieproject@yahoo.com'  # Your Yahoo email
+EMAIL_HOST_PASSWORD = 'ctjjwrzpusfgdpye'  # Not your login password (see below!)
+DEFAULT_FROM_EMAIL = 'tarasjulieproject@yahoo.com' # EMAIL_HOST_USER

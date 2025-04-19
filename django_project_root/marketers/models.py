@@ -19,7 +19,8 @@ class Marketer(models.Model):
     )
     phone = models.ForeignKey(Mobiles, on_delete=models.CASCADE)
     company = models.CharField(max_length=100, blank=False, null=False)
-    link = models.URLField(max_length=255, unique=True, blank=False, null=False)
+    # link = models.URLField(max_length=255, unique=True, blank=False, null=False)
+    link = models.URLField(max_length=255, blank=False, null=False)
     
     class Meta:
         constraints = [

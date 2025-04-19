@@ -54,4 +54,5 @@ urlpatterns = [
     path("api/", include("mobiles.urls")),
     path("api/", include("reviews.urls")),
     path("api/", include("marketers.urls")),
+    path('api/', include('contacts.urls')), 
 ]

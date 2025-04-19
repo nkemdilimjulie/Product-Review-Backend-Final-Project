@@ -2,7 +2,7 @@ from rest_framework import permissions
 from django.core.exceptions import PermissionDenied
 
 
-# only authenticated users can acces list API view, detail API view    
+#only authenticated users can acces list API view, detail API view    
 class IsAuthorOrReadOnly(permissions.BasePermission):
     def has_permission(self, request, view):
         # Authenticated users can access list view
