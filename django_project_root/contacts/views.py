@@ -45,10 +45,10 @@ class ContactView(APIView):
         # Send the email
         try:
             send_mail(
-                subject="New Contact Message",
+                subject="New Contact Message from Frontend: About Us section",
                 message=message,
-                from_email=None,  # Use the default email from settings if needed
-                recipient_list=['tarasjulieproject@yahoo.com'],
+                from_email= "amchosen@yahoo.com",  # Use the default email from settings if needed
+                recipient_list=["amchosen@yahoo.com"],
                 fail_silently=True,
             )
             return Response({"success": "Message sent successfully!"}, status=status.HTTP_200_OK)
