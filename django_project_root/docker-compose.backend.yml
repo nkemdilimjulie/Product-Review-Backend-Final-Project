@@ -8,13 +8,13 @@ services:
     restart: always
     command: >
       sh -c "python manage.py migrate &&
-             gunicorn --workers 3 --bind 0.0.0.0:8000 django_project.wsgi:application"
+             gunicorn --workers 3 --bind 0.0.0.0:8080 django_project.wsgi:application"
     volumes:
       - .:/usr/src/app
       - static_volume_live:/usr/src/app/staticfiles
     # map container port to host machine port
     ports:
-      - "8000:8000"
+      - "8080:8080"
     depends_on:
       - postgres_service
     environment:
@@ -31,7 +31,7 @@ services:
   # with the start of container ie. service, the below DB will be created
   postgres_service:
     image: postgres:latest
-    container_name: postgres_service_container
+    container_name: backend
     restart: always
     environment:
       - POSTGRES_DB=${DATABASE_NAME}

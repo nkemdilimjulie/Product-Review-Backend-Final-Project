@@ -29,7 +29,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
+
+ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -115,10 +117,10 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_NAME', 'postgres'),
-        'USER': os.getenv('DATABASE_USER', 'postgres'),
+        'NAME': os.getenv('DATABASE_NAME', 'postgres_db'),
+        'USER': os.getenv('DATABASE_USER', 'postgres_user'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD', ''),
-        'HOST': os.getenv('DATABASE_HOST', 'postgres'),  # Uses service name
+        'HOST': os.getenv('DATABASE_HOST', 'postgres_service'),  # Uses service name
         'PORT': os.getenv('DATABASE_PORT', '5432'),
     }
 }
