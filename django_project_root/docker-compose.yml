@@ -4,17 +4,17 @@ services:
   # based on current Dockerfile image which contains: djago application, preinstalled gunicorn.
   web:
     build: .
-    container_name: django_app
+    container_name: django_app_after
     restart: always
     command: >
       sh -c "python manage.py migrate &&
-             gunicorn --workers 3 --bind 0.0.0.0:8080 django_project.wsgi:application"
+             gunicorn --workers 3 --bind 0.0.0.0:8000 django_project.wsgi:application"
     volumes:
       - .:/usr/src/app
       - static_volume_live:/usr/src/app/staticfiles
     # map container port to host machine port
     ports:
-      - "8080:8080"
+      - "8000:8000"
     depends_on:
       - postgres_service
     environment:
